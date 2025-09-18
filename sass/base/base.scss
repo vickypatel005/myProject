@@ -1,0 +1,163 @@
+@use "../base/variable.scss" as variable;
+@use "../base/mixins.scss" as mixins;
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: inherit;
+  background-color: variable.$white;
+}
+
+.btn-primary {
+  background-color: variable.$primary_color;
+  color: variable.$black;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: variable.$black;
+    border-radius: 5px;
+  }
+}
+
+.form-group {
+  .form-control {
+    border: 1px solid variable.$sky_color;
+    border-radius: 27px;
+    width: 100%;
+    padding: 15px 25px;
+    overflow: hidden;
+    font-size: 16px;
+    background-color: transparent;
+    color: variable.$secondary_color;
+
+    &:focus {
+      outline: variable.$secondary_color;
+    }
+
+    &::placeholder {
+      color: variable.$secondary_color;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+  &.form-control {
+    min-height: 170px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.no_event {
+  pointer-events: none;
+}
+
+.scroll_off {
+  overflow: hidden;
+  @include mixins.ioshidden();
+}
+
+#pb_scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+  background-color: none;
+}
+
+#pb_scroll::-webkit-scrollbar {
+  width: 3px;
+  background-color: none;
+}
+
+#pb_scroll::-webkit-scrollbar-thumb {
+  background-color: variable.$black;
+  border: 1px solid variable.$black;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {
+}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+  .form-group {
+    .form-control {
+      padding: 14px 22px;
+      font-size: 16px;
+    }
+  }
+
+  textarea.form-control {
+    min-height: 160px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+  .form-group {
+    .form-control {
+      padding: 13px 18px;
+      font-size: 15px;
+    }
+  }
+
+  textarea.form-control {
+    min-height: 150px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+  .form-group {
+    .form-control {
+      padding: 13px 18px;
+      font-size: 15px;
+    }
+  }
+
+  textarea.form-control {
+    min-height: 150px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+}
